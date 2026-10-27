@@ -1,0 +1,16 @@
+# Bí mật
+.env
+.env.*
+*.key
+*.pem
+
+# Hệ điều hành và trình soạn thảo
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+*.tmp
+~$*
+
+# Tài nguyên prompt nội bộ, không đưa lên repo
+careful-writing/

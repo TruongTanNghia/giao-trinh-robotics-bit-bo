@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-label="Lộ trình 4 chặng, 32 buổi của khóa Biệt đội Kỹ sư Nhí">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FCF6EC"/>
+      <stop offset="1" stop-color="#F3E3CC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="260" rx="18" fill="url(#bg)"/>
+
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <text x="600" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#0E4A63" letter-spacing="1.5">LỘ TRÌNH 16 TUẦN · 32 BUỔI</text>
+
+    <!-- Đường nối -->
+    <path id="track" d="M 130 130 L 1070 130" stroke="#0E4A63" stroke-width="4" stroke-dasharray="10 10" opacity="0.35"/>
+    <circle r="9" fill="#F28C1B">
+      <animateMotion dur="6s" repeatCount="indefinite" path="M 130 130 L 1070 130"/>
+    </circle>
+    <circle r="6" fill="#3BB8C3">
+      <animateMotion dur="6s" begin="-3s" repeatCount="indefinite" path="M 130 130 L 1070 130"/>
+    </circle>
+
+    <!-- Chặng 1 -->
+    <g>
+      <rect x="30" y="72" width="200" height="116" rx="16" fill="#FFFFFF" stroke="#0E4A63" stroke-width="3"/>
+      <text x="130" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#1E8FA8" letter-spacing="1">CHẶNG 1</text>
+      <text x="130" y="128" text-anchor="middle" font-size="17" font-weight="800" fill="#0E4A63">Đánh thức Bít-Bô</text>
+      <text x="130" y="152" text-anchor="middle" font-size="13" fill="#0E4A63" opacity="0.8">Mạch điện · Pin · LED</text>
+      <text x="130" y="174" text-anchor="middle" font-size="13" font-weight="700" fill="#F28C1B">Buổi 1–6 · Tuần 1–3</text>
+    </g>
+    <!-- Chặng 2 -->
+    <g>
+      <rect x="265" y="72" width="200" height="116" rx="16" fill="#FFFFFF" stroke="#0E4A63" stroke-width="3"/>
+      <text x="365" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#1E8FA8" letter-spacing="1">CHẶNG 2</text>
+      <text x="365" y="128" text-anchor="middle" font-size="17" font-weight="800" fill="#0E4A63">Chế tạo xe cứu hộ</text>
+      <text x="365" y="152" text-anchor="middle" font-size="13" fill="#0E4A63" opacity="0.8">Bánh xe · Bánh răng · Động cơ</text>
+      <text x="365" y="174" text-anchor="middle" font-size="13" font-weight="700" fill="#F28C1B">Buổi 7–14 · Tuần 4–7</text>
+    </g>
+    <!-- Chặng 3 -->
+    <g>
+      <rect x="500" y="72" width="200" height="116" rx="16" fill="#FFFFFF" stroke="#0E4A63" stroke-width="3"/>
+      <text x="600" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#1E8FA8" letter-spacing="1">CHẶNG 3</text>
+      <text x="600" y="128" text-anchor="middle" font-size="16" font-weight="800" fill="#0E4A63">Dạy robot suy nghĩ</text>
+      <text x="600" y="152" text-anchor="middle" font-size="13" fill="#0E4A63" opacity="0.8">Lập trình khối · Cảm biến</text>
+      <text x="600" y="174" text-anchor="middle" font-size="13" font-weight="700" fill="#F28C1B">Buổi 15–24 · Tuần 8–12</text>
+    </g>
+    <!-- Chặng 4 -->
+    <g>
+      <rect x="735" y="72" width="200" height="116" rx="16" fill="#FFFFFF" stroke="#0E4A63" stroke-width="3"/>
+      <text x="835" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#1E8FA8" letter-spacing="1">CHẶNG 4</text>
+      <text x="835" y="128" text-anchor="middle" font-size="16" font-weight="800" fill="#0E4A63">Robot của riêng em</text>
+      <text x="835" y="152" text-anchor="middle" font-size="13" fill="#0E4A63" opacity="0.8">Thiết kế · Chế tạo · Thanh tra</text>
+      <text x="835" y="174" text-anchor="middle" font-size="13" font-weight="700" fill="#F28C1B">Buổi 25–32 · Tuần 13–16</text>
+    </g>
+    <!-- Ngày hội -->
+    <g>
+      <rect x="970" y="72" width="200" height="116" rx="16" fill="#0E4A63">
+        <animate attributeName="fill" values="#0E4A63;#1E8FA8;#0E4A63" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <text x="1070" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#FFB547" letter-spacing="1">ĐÍCH ĐẾN</text>
+      <text x="1070" y="128" text-anchor="middle" font-size="17" font-weight="800" fill="#FCF6EC">Ngày hội Robot</text>
+      <text x="1070" y="152" text-anchor="middle" font-size="13" fill="#FCF6EC" opacity="0.85">Trình diễn cùng phụ huynh</text>
+      <text x="1070" y="174" text-anchor="middle" font-size="13" font-weight="700" fill="#FFB547">Bít-Bô thức dậy!</text>
+    </g>
+
+    <!-- Nhịp mỗi tuần -->
+    <rect x="360" y="208" width="480" height="34" rx="17" fill="#0E4A63"/>
+    <text x="600" y="231" text-anchor="middle" font-size="15" font-weight="700" fill="#FCF6EC">Mỗi tuần: <tspan fill="#FFB547">Lý thuyết 60'</tspan> → <tspan fill="#3BB8C3">Thực hành 90'</tspan></text>
+  </g>
+</svg>

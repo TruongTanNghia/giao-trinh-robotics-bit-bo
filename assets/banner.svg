@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-label="Biệt đội Kỹ sư Nhí: Cứu Hành tinh Bít-Bô – giáo trình robotics cho học sinh tiểu học">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FCF6EC"/>
+      <stop offset="1" stop-color="#F3E3CC"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#0E4A63" opacity="0.08"/>
+    </pattern>
+    <linearGradient id="planet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB547"/>
+      <stop offset="1" stop-color="#F28C1B"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3BB8C3"/>
+      <stop offset="1" stop-color="#1E8FA8"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#FFB547" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FFB547" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="380" fill="url(#bg)"/>
+  <rect width="1200" height="380" fill="url(#dots)"/>
+
+  <!-- Bên trái: chữ -->
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <rect x="60" y="52" width="372" height="30" rx="15" fill="#0E4A63"/>
+    <text x="78" y="73" font-size="14" font-weight="700" fill="#FCF6EC" letter-spacing="1.6">GIÁO TRÌNH ROBOTICS · TIỂU HỌC</text>
+
+    <text x="58" y="148" font-size="56" font-weight="800" fill="#0E4A63">Biệt đội Kỹ sư Nhí</text>
+    <text x="60" y="204" font-size="42" font-weight="800" fill="#F28C1B">Cứu Hành tinh Bít-Bô</text>
+
+    <rect x="60" y="220" width="0" height="5" rx="2.5" fill="#3BB8C3">
+      <animate attributeName="width" values="0;440;440" keyTimes="0;0.4;1" dur="4s" repeatCount="indefinite"/>
+    </rect>
+
+    <text x="60" y="262" font-size="19" fill="#0E4A63" opacity="0.85">32 buổi · 16 lý thuyết + 16 thực hành · Lớp 1–5 · Từ con số 0</text>
+
+    <g font-size="14" font-weight="700">
+      <rect x="60" y="290" width="92" height="32" rx="16" fill="#FFFFFF" stroke="#0E4A63" stroke-width="1.5"/>
+      <text x="106" y="311" text-anchor="middle" fill="#0E4A63">Lắp ráp</text>
+      <rect x="164" y="290" width="138" height="32" rx="16" fill="#FFFFFF" stroke="#1E8FA8" stroke-width="1.5"/>
+      <text x="233" y="311" text-anchor="middle" fill="#1E8FA8">Lập trình khối</text>
+      <rect x="314" y="290" width="100" height="32" rx="16" fill="#FFFFFF" stroke="#F28C1B" stroke-width="1.5"/>
+      <text x="364" y="311" text-anchor="middle" fill="#F28C1B">Cảm biến</text>
+      <rect x="426" y="290" width="162" height="32" rx="16" fill="#0E4A63"/>
+      <text x="507" y="311" text-anchor="middle" fill="#FFB547">Học qua phiêu lưu</text>
+    </g>
+  </g>
+
+  <!-- Bên phải: hành tinh Bít-Bô và robot -->
+  <circle cx="930" cy="180" r="150" fill="url(#glow)">
+    <animate attributeName="r" values="135;160;135" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <g>
+    <circle cx="1010" cy="140" r="78" fill="url(#planet)"/>
+    <circle cx="985" cy="115" r="12" fill="#F28C1B" opacity="0.55"/>
+    <circle cx="1040" cy="170" r="16" fill="#F28C1B" opacity="0.5"/>
+    <circle cx="1030" cy="105" r="7" fill="#FCF6EC" opacity="0.6"/>
+    <ellipse cx="1010" cy="140" rx="122" ry="26" fill="none" stroke="#0E4A63" stroke-width="3" opacity="0.55" transform="rotate(-14 1010 140)"/>
+    <circle r="7" fill="#3BB8C3">
+      <animateMotion dur="5s" repeatCount="indefinite" path="M 892 168 A 122 26 -14 1 1 1128 112 A 122 26 -14 1 1 892 168"/>
+    </circle>
+  </g>
+
+  <!-- Sóng siêu âm -->
+  <g fill="none" stroke="#1E8FA8" stroke-width="3" stroke-linecap="round">
+    <path d="M 760 230 q -14 -22 0 -44">
+      <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 744 244 q -24 -36 0 -72">
+      <animate attributeName="opacity" values="0;1;0" dur="1.8s" begin="0.3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 728 258 q -34 -50 0 -100">
+      <animate attributeName="opacity" values="0;1;0" dur="1.8s" begin="0.6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Robot -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0" dur="2.4s" repeatCount="indefinite"/>
+    <line x1="850" y1="132" x2="850" y2="110" stroke="#0E4A63" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="850" cy="104" r="9" fill="#F28C1B">
+      <animate attributeName="fill" values="#F28C1B;#FFB547;#F28C1B" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <rect x="790" y="132" width="120" height="92" rx="26" fill="url(#body)" stroke="#0E4A63" stroke-width="5"/>
+    <rect x="806" y="156" width="88" height="34" rx="14" fill="#0E4A63"/>
+    <rect x="820" y="166" width="20" height="14" rx="5" fill="#FCF6EC">
+      <animate attributeName="height" values="14;2;14;14" keyTimes="0;0.05;0.1;1" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="860" y="166" width="20" height="14" rx="5" fill="#FCF6EC">
+      <animate attributeName="height" values="14;2;14;14" keyTimes="0;0.05;0.1;1" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+    <path d="M 834 204 q 16 12 32 0" fill="none" stroke="#0E4A63" stroke-width="4" stroke-linecap="round"/>
+    <rect x="778" y="160" width="12" height="34" rx="6" fill="#3BB8C3" stroke="#0E4A63" stroke-width="4"/>
+    <rect x="910" y="160" width="12" height="34" rx="6" fill="#3BB8C3" stroke="#0E4A63" stroke-width="4"/>
+    <rect x="806" y="228" width="88" height="60" rx="18" fill="url(#body)" stroke="#0E4A63" stroke-width="5"/>
+    <circle cx="850" cy="258" r="11" fill="#FFB547" stroke="#0E4A63" stroke-width="3"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 902 238;-28 902 238;0 902 238" dur="1.6s" repeatCount="indefinite"/>
+      <line x1="902" y1="238" x2="944" y2="214" stroke="#0E4A63" stroke-width="7" stroke-linecap="round"/>
+    </g>
+    <line x1="798" y1="238" x2="768" y2="262" stroke="#0E4A63" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="826" cy="300" r="13" fill="#0E4A63"/>
+    <circle cx="874" cy="300" r="13" fill="#0E4A63"/>
+  </g>
+
+  <!-- Đường dữ liệu từ robot tới hành tinh -->
+  <path d="M 910 180 C 950 230, 1000 250, 1050 222" fill="none" stroke="#F28C1B" stroke-width="3" stroke-dasharray="8 10" stroke-linecap="round">
+    <animate attributeName="stroke-dashoffset" values="36;0" dur="1s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Mặt đất -->
+  <ellipse cx="850" cy="322" rx="110" ry="10" fill="#0E4A63" opacity="0.12"/>
+
+  <text x="1180" y="364" text-anchor="end" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#0E4A63" opacity="0.55">© Trương Tấn Nghĩa · AI Học Lập Trình</text>
+</svg>

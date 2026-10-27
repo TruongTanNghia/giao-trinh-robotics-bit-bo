@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biệt đội Kỹ sư Nhí: Cứu Hành tinh Bít-Bô</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d1b4b;--soft:#5a5784;--paper:#f6f3ff;--line:#d9d4f3;--y:#ffb800;--g:#11a38c;--p:#e8467c;--b:#3d5afe;--sh:4px 4px 0 var(--ink)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:Nunito,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:17px}
+h1,h2,h3,.d{font-family:'Baloo 2',Nunito,sans-serif;line-height:1.15}
+.w{max-width:1100px;margin:0 auto;padding:0 22px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--b);outline-offset:3px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:var(--ink);border-bottom:4px solid var(--y)}
+nav .w{display:flex;gap:4px;overflow-x:auto;padding:8px 22px;scrollbar-width:none}
+nav a{color:#cfcdf5;text-decoration:none;font-weight:800;font-size:15px;padding:7px 14px;border-radius:999px;white-space:nowrap}
+nav a.on{background:var(--y);color:var(--ink)}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;padding:60px 0 84px;position:relative;overflow:hidden;
+background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#8f8cf0 1px,transparent 1.5px);background-size:90px 90px,53px 53px;background-position:0 0,27px 31px}
+.hero .w{display:grid;grid-template-columns:1.25fr 1fr;gap:30px;align-items:center}
+.kick{display:inline-block;background:var(--p);padding:5px 16px;border-radius:999px;font-weight:800;font-size:15px;margin-bottom:18px}
+h1{font-size:clamp(40px,6.6vw,78px);font-weight:800}
+h1 span{display:block;color:var(--y)}
+.hero p.sub{color:#d6d4fa;margin:20px 0 26px;max-width:48ch;font-size:19px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips b{background:#fff;color:var(--ink);border-radius:14px;padding:6px 16px;font-weight:800;box-shadow:3px 3px 0 var(--y)}
+.planet{width:100%;max-width:400px;justify-self:center}
+.glow{animation:wake 4.5s ease-in-out infinite}
+@keyframes wake{0%,100%{opacity:.4}50%{opacity:1}}
+.wave{position:absolute;left:0;right:0;bottom:-1px;height:40px;background:var(--paper);clip-path:ellipse(60% 100% at 50% 100%)}
+
+/* sections */
+section{padding:76px 0 8px}
+.sh{display:flex;gap:18px;align-items:center;margin-bottom:12px}
+.num{flex:none;width:58px;height:58px;display:grid;place-items:center;border-radius:18px;border:3px solid var(--ink);box-shadow:var(--sh);background:var(--c,var(--y));font:800 28px 'Baloo 2'}
+h2{font-size:clamp(28px,4vw,44px)}
+.lead{color:var(--soft);max-width:66ch;margin:0 0 30px 76px}
+h3{font-size:21px}
+.card{background:#fff;border:3px solid var(--ink);border-radius:20px;box-shadow:var(--sh);padding:20px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card p{color:var(--soft);font-size:15.5px;margin-top:4px}
+.ico{font-size:34px;line-height:1;margin-bottom:10px;display:block}
+.cols{display:grid;gap:24px;grid-template-columns:1fr 1fr}
+h4{font:800 22px 'Baloo 2';margin:6px 0 14px}
+
+/* overview */
+.facts{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.fact{background:var(--c);color:var(--ink);text-align:center;padding:22px 14px}
+.fact b{display:block;font:800 44px/1 'Baloo 2'}
+.fact span{font-weight:800;font-size:15px}
+
+/* flow */
+.flow{display:flex;flex-wrap:wrap;gap:0;margin:0 0 26px;list-style:none;counter-reset:f}
+.flow li{counter-increment:f;position:relative;background:var(--c);border:3px solid var(--ink);font-weight:800;padding:12px 24px 12px 38px;margin-right:-3px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%,16px 50%)}
+.flow li:first-child{clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%)}
+.flow li::before{content:counter(f);margin-right:8px;font-family:'Baloo 2'}
+
+/* xu */
+table{width:100%;border-collapse:collapse}
+td{padding:10px 0;border-bottom:2px dashed var(--line)}
+tr:last-child td{border:0}
+td:last-child{text-align:right;font:800 22px 'Baloo 2';color:var(--p);padding-left:14px;white-space:nowrap}
+.ranks{display:flex;align-items:flex-end;gap:8px;height:150px;margin-bottom:6px}
+.ranks div{flex:1;border:3px solid var(--ink);border-radius:12px 12px 0 0;background:var(--c);display:grid;align-items:end;text-align:center;font-weight:800;font-size:13px;line-height:1.2;padding:6px 2px}
+
+/* hardware */
+.part{border-top:10px solid var(--c)}
+.part .nick{font:800 22px 'Baloo 2';color:var(--c)}
+.part h3{font-size:15px;font-family:Nunito;color:var(--soft);font-weight:800;margin-bottom:8px}
+.part em{display:block;font-style:normal;font-size:14px;margin-top:8px;padding-top:8px;border-top:2px dashed var(--line)}
+
+/* ladder */
+.stair{display:grid;gap:12px;list-style:none}
+.stair li{display:grid;grid-template-columns:54px 1fr 1fr;gap:16px;align-items:center;margin-left:calc(var(--n)*22px);padding:12px 18px}
+.stair .lv{width:50px;height:50px;display:grid;place-items:center;border-radius:14px;background:var(--b);color:#fff;font:800 24px 'Baloo 2';border:3px solid var(--ink)}
+.stair small{display:block;color:var(--soft);font-size:14px}
+
+/* map */
+.chang{background:#fff;border:3px solid var(--ink);border-radius:24px;box-shadow:var(--sh);padding:20px 22px;margin-bottom:18px;border-left:14px solid var(--c)}
+.chang header{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.chang h3{color:var(--c)}
+.chang header span{font-weight:800;color:var(--soft)}
+.nodes{display:flex;flex-wrap:wrap;gap:10px}
+.node{width:96px;background:none;border:0;cursor:pointer;font:inherit;color:var(--ink);text-align:center;padding:4px}
+.node i{display:grid;place-items:center;width:58px;height:58px;margin:0 auto 6px;border-radius:50%;border:3px solid var(--ink);background:#fff;font:800 22px 'Baloo 2';transition:.15s}
+.node small{display:block;font-size:13px;line-height:1.3;font-weight:600}
+.node:hover i{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--ink)}
+.node.on i{background:var(--c)}
+.node[aria-pressed=true] i{box-shadow:0 0 0 4px #fff,0 0 0 7px var(--ink)}
+.bar{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.bar div{flex:1;height:18px;border:3px solid var(--ink);border-radius:99px;background:#fff;overflow:hidden}
+.bar em{display:block;height:100%;width:0;background:repeating-linear-gradient(45deg,var(--y) 0 10px,#ffd25e 10px 20px);transition:width .4s}
+.bar b{font-family:'Baloo 2';font-size:19px;white-space:nowrap}
+#detail{background:var(--ink);color:#fff;border-radius:24px;padding:28px;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--c,var(--y))}
+#detail h3{font-size:28px;margin-bottom:14px;color:var(--c,var(--y))}
+#detail dl{display:grid;grid-template-columns:100px 1fr;gap:12px 18px}
+#detail dt{font-weight:800;color:#b9b6ee}
+.tag{display:inline-block;margin-top:16px;background:#fff;color:var(--ink);border-radius:999px;padding:4px 16px;font-weight:800;font-size:14px}
+
+/* timeline */
+.time{display:flex;border:3px solid var(--ink);border-radius:20px;overflow:hidden;box-shadow:var(--sh);margin-bottom:22px}
+.time div{padding:14px 10px;text-align:center;font-size:14px;font-weight:800;line-height:1.3;background:var(--c);border-right:3px solid var(--ink)}
+.time div:last-child{border:0}
+.time b{display:block;font:800 24px 'Baloo 2'}
+
+.tips{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.rules{list-style:none;display:grid;gap:10px}
+.rules li{padding-left:34px;position:relative}
+.rules li::before{content:"⛑️";position:absolute;left:0}
+.quote{background:var(--p);color:#fff;font-size:19px;padding:32px;border-radius:26px;border:3px solid var(--ink);box-shadow:var(--sh)}
+.quote h2{margin-bottom:12px}.quote p+p{margin-top:12px}
+footer{text-align:center;padding:54px 22px;font-weight:800;color:var(--soft)}
+
+@media(max-width:860px){.hero .w,.cols{grid-template-columns:1fr}.planet{max-width:250px;order:-1}.lead{margin-left:0}.stair li{grid-template-columns:54px 1fr;margin-left:0}.stair li>div:last-child{grid-column:2}#detail dl{grid-template-columns:1fr;gap:2px}#detail dd{margin-bottom:10px}.time{flex-wrap:wrap}.time div{flex:1 1 33%!important;border-bottom:3px solid var(--ink)}.sh{gap:12px}.num{width:48px;height:48px;font-size:22px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav aria-label="Mục lục"><div class="w" id="nav"></div></nav>
+
+<header class="hero"><div class="w">
+ <div>
+  <span class="kick">Giáo trình robotics cho học sinh tiểu học</span>
+  <h1>Biệt đội Kỹ sư Nhí <span>Cứu Hành tinh Bít-Bô</span></h1>
+  <p class="sub">Một đêm nọ, Bác Bug lẻn vào và làm cả hành tinh robot "ngủ đông". Mỗi buổi học là một nhiệm vụ, và mỗi nhiệm vụ đánh thức thêm một vùng của Bít-Bô.</p>
+  <div class="chips"><b>16 buổi</b><b>Lớp 1–5</b><b>Từ con số 0</b><b>Học qua phiêu lưu</b></div>
+ </div>
+ <svg class="planet" viewBox="0 0 400 400" role="img" aria-label="Hành tinh Bít-Bô, các vùng đang sáng dần">
+  <circle cx="200" cy="205" r="150" fill="#2c2a6b" stroke="#fff" stroke-width="4"/>
+  <g class="glow"><circle cx="140" cy="150" r="32" fill="#ffb800"/></g>
+  <g class="glow" style="animation-delay:1s"><circle cx="262" cy="168" r="24" fill="#11a38c"/></g>
+  <g class="glow" style="animation-delay:2s"><circle cx="150" cy="275" r="34" fill="#e8467c"/></g>
+  <g class="glow" style="animation-delay:3s"><circle cx="275" cy="270" r="20" fill="#3d5afe"/></g>
+  <ellipse cx="200" cy="205" rx="190" ry="40" fill="none" stroke="#ffb800" stroke-width="6" transform="rotate(-18 200 205)"/>
+  <rect x="160" y="185" width="80" height="58" rx="16" fill="#fff" stroke="#1d1b4b" stroke-width="4"/>
+  <circle cx="181" cy="210" r="8" fill="#1d1b4b"/><circle cx="219" cy="210" r="8" fill="#1d1b4b"/><rect x="186" y="226" width="28" height="6" rx="3" fill="#e8467c"/>
+  <rect x="198" y="162" width="4" height="23" fill="#fff"/><circle cx="200" cy="160" r="7" fill="#e8467c"/>
+  <g transform="translate(318 70)"><ellipse cx="0" cy="0" rx="26" ry="20" fill="#7ee08a" stroke="#fff" stroke-width="3"/><circle cx="-9" cy="-4" r="5" fill="#fff"/><circle cx="9" cy="-4" r="5" fill="#fff"/><circle cx="-8" cy="-4" r="2" fill="#1d1b4b"/><circle cx="10" cy="-4" r="2" fill="#1d1b4b"/><path d="M-12 6q12 9 24 0" stroke="#1d1b4b" stroke-width="3" fill="none"/><path d="M-8-18l-6-10M8-18l6-10" stroke="#7ee08a" stroke-width="3"/></g>
+ </svg>
+</div><div class="wave"></div></header>
+
+<main class="w">
+
+<section id="tong-quan"><div class="sh"><span class="num" style="--c:var(--y)">1</span><h2>Tổng quan khóa học</h2></div>
+ <p class="lead">Khóa học dành cho các em chưa biết gì về robot. Các em là Kỹ sư cứu hộ, thầy là Chỉ huy Căn cứ.</p>
+ <div class="facts">
+  <div class="card fact" style="--c:#ffd25e"><b>16</b><span>buổi, 1 buổi/tuần</span></div>
+  <div class="card fact" style="--c:#7fe0cf"><b>60–90'</b><span>mỗi buổi</span></div>
+  <div class="card fact" style="--c:#ff9dbb"><b>12–16</b><span>em/lớp, 1 thầy + 1 trợ giảng</span></div>
+  <div class="card fact" style="--c:#aebaff"><b>1–5</b><span>lớp, chia nhóm 1–3 và 4–5</span></div>
+ </div>
+ <p class="lead" style="margin:22px 0 0">Sản phẩm cuối khóa: robot do nhóm tự thiết kế, tự lập trình, trình diễn trong Ngày hội Robot.</p>
+</section>
+
+<section id="triet-ly"><div class="sh"><span class="num" style="--c:var(--g)">2</span><h2>Triết lý: trẻ cần gì để mê?</h2></div>
+ <p class="lead">Dạy trẻ khác dạy người lớn: không quá sâu vì các em chưa hiểu hết, không quá nông để các em còn sáng tạo. Mỗi thiết kế bên dưới đáp lại một nhu cầu của trẻ.</p>
+ <div class="grid" id="psy"></div>
+ <h4 style="margin-top:36px">Nguyên tắc cho mọi bài học</h4>
+ <ol class="flow" id="princ"></ol>
+ <div class="card"><h3>Bài mẫu: dạy cảm biến</h3><p>Bịt mắt một bé và nhờ bé né vật cản: bé khó làm vì thiếu thông tin. Rồi báo "phía trước 5 bước có vật cản, hãy rẽ trái": bé biết đường. Lúc đó hỏi "làm sao robot biết có vật cản?" và giới thiệu cảm biến siêu âm. Cảm biến cho khoảng cách, chương trình quyết định, động cơ thực hiện.</p></div>
+</section>
+
+<section id="diem-thuong"><div class="sh"><span class="num" style="--c:var(--p)">3</span><h2>Điểm, cấp bậc và thưởng</h2></div>
+ <p class="lead">Điểm thưởng cho quá trình, không chỉ kết quả, để em nào cũng có cơ hội. Có điểm cá nhân để lên cấp và điểm đội để cùng thắng.</p>
+ <div class="cols">
+  <div class="card"><h4>⚡ Xu Năng Lượng</h4><table id="xu"></table></div>
+  <div>
+   <div class="card"><h4>Cấp bậc: ai chăm chỉ cũng lên được</h4><div class="ranks" id="ranks"></div></div>
+   <div class="grid" id="badge" style="grid-template-columns:1fr 1fr;margin-top:20px;gap:14px"></div>
+  </div>
+ </div>
+ <p class="lead" style="margin:22px 0 0">Hộp Bí Ẩn mở ở buổi 4, 8, 12. Dùng thanh tiến độ cá nhân thay bảng xếp hạng, và ưu tiên thưởng bằng vinh dự và quyền lựa chọn hơn đồ ăn hay tiền.</p>
+</section>
+
+<section id="phan-cung"><div class="sh"><span class="num" style="--c:var(--b);color:#fff">4</span><h2>Phần cứng: từ viên pin đến bộ não</h2></div>
+ <p class="lead">Mỗi linh kiện là một nhân vật có biệt danh. Mỗi buổi tối đa 2 bộ phận mới, và luôn đi qua 5 bước:</p>
+ <ol class="flow" id="five" style="margin-left:76px"></ol>
+ <div class="grid" id="parts"></div>
+</section>
+
+<section id="lap-trinh"><div class="sh"><span class="num" style="--c:var(--y)">5</span><h2>Lập trình: bậc thang 7 nấc</h2></div>
+ <p class="lead">Nấc nào cũng bắt đầu bằng trò chơi không cần máy rồi mới làm trên máy. Ở các nấc đầu không đánh chữ, chỉ dùng khối màu. Cả đội chỉ lên nấc mới khi làm được nấc cũ mà không cần gợi ý.</p>
+ <ul class="stair" id="stair"></ul>
+</section>
+
+<section id="lo-trinh"><div class="sh"><span class="num" style="--c:var(--p)">6</span><h2>Lộ trình 16 nhiệm vụ</h2></div>
+ <p class="lead">Bấm vào nhiệm vụ để xem chi tiết. Mỗi nhiệm vụ đã mở sẽ tô sáng thêm một vùng Bít-Bô, như Bản đồ Hành trình dán trên tường lớp.</p>
+ <div class="bar"><div><em id="fill"></em></div><b id="count"></b></div>
+ <div id="chang"></div>
+ <div id="detail" aria-live="polite"><h3>Chọn một nhiệm vụ để bắt đầu</h3><p>Mỗi buổi tối đa 2 bộ phận mới và 1 khái niệm code mới.</p></div>
+</section>
+
+<section id="buoi-hoc"><div class="sh"><span class="num" style="--c:var(--g)">7</span><h2>Khung một buổi học</h2></div>
+ <p class="lead">Mọi buổi đều theo một nhịp: mở bằng bí ẩn, đoán trước, làm theo đội, và bỏ lửng một bí ẩn cho tuần sau.</p>
+ <div class="time">
+  <div style="flex:5;--c:#ff9dbb"><b>5'</b>Tín hiệu từ Bít-Bô</div><div style="flex:5;--c:#ffd25e"><b>5'</b>Đoán trước, cược Xu</div><div style="flex:10;--c:#7fe0cf"><b>10'</b>Khám phá</div><div style="flex:30;--c:#aebaff"><b>35–45'</b>Nhiệm vụ theo đội</div><div style="flex:10;--c:#ffd25e"><b>10'</b>Báo cáo căn cứ</div><div style="flex:5;--c:#ff9dbb"><b>5'</b>Cliffhanger</div>
+ </div>
+</section>
+
+<section id="an-toan"><div class="sh"><span class="num" style="--c:var(--b);color:#fff">8</span><h2>An toàn và xử lý tình huống</h2></div>
+ <div class="cols" style="margin-top:20px">
+  <div class="card"><h4>Luật an toàn</h4><ul class="rules">
+   <li>Không cho linh kiện nhỏ vào miệng, mũi, tai. Không dùng pin cúc áo.</li>
+   <li>Không nối thẳng hai đầu pin bằng một sợi dây.</li>
+   <li>Không giữ bánh xe hoặc trục khi động cơ chạy.</li>
+   <li>Tay ướt không chạm mạch. Tóc dài buộc gọn.</li>
+   <li>Thầy hoặc trợ giảng thay pin. Các em không tự sạc.</li>
+   <li>Luôn có Plan B không cần máy cho mỗi buổi.</li></ul></div>
+  <div class="card"><h4>Khi lớp "có chuyện"</h4><div id="tips" style="display:grid;gap:12px"></div></div>
+ </div>
+ <div class="quote" style="margin-top:44px"><h2>Quan điểm</h2><p>Điểm và quà chỉ để mở đầu. Cuối khóa, bớt dần điểm, tăng phần tự chọn dự án, và khen nỗ lực hơn khen thông minh.</p><p>Niềm vui lớn nhất phải là tự tạo ra thứ chạy được.</p></div>
+</section>
+</main>
+<footer>Biệt đội Kỹ sư Nhí: Cứu Hành tinh Bít-Bô</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const C=['#ffb800','#11a38c','#e8467c','#3d5afe'];
+const T=[['tong-quan','Tổng quan'],['triet-ly','Triết lý'],['diem-thuong','Điểm thưởng'],['phan-cung','Phần cứng'],['lap-trinh','Lập trình'],['lo-trinh','Lộ trình'],['buoi-hoc','Một buổi học'],['an-toan','An toàn']];
+$('nav').innerHTML=T.map(t=>`<a href="#${t[0]}">${t[1]}</a>`).join('');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')=='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
+T.forEach(t=>io.observe($(t[0])));
+const flow=(a,cs)=>a.map((x,i)=>`<li style="--c:${cs[i%cs.length]}">${x}</li>`).join('');
+const PC=['#ffd25e','#7fe0cf','#ff9dbb','#aebaff','#ffd25e'];
+$('princ').innerHTML=flow(['Trải nghiệm','Nảy sinh câu hỏi','Khám phá','Giải thích','Thực hành'],PC);
+$('five').innerHTML=flow(['Nhìn','Sờ','Đoán','Thử','Kể'],PC);
+$('psy').innerHTML=[['🔍','Tò mò khi có "khoảng trống"','Mỗi buổi mở bằng một bí ẩn, chỉ giải đáp ở cuối phần thực hành.'],['🎯','Muốn đoán trước','Luôn hỏi "Em đoán chuyện gì sẽ xảy ra?" trước khi thử. Đoán sai cũng vui.'],['🦸','Muốn là nhân vật quan trọng','Các em là Kỹ sư cứu hộ có chức danh, thẻ bài và nhiệm vụ riêng.'],['⚡','Thích thắng nhanh','10 phút đầu luôn có chiến thắng nhỏ: thứ gì đó sáng, kêu hoặc chạy.'],['🐛','Sợ sai, sợ bị chê','Lỗi là "Bác Bug", con sâu tinh nghịch. Bắt được Bác Bug thì được điểm.'],['✋','Muốn được chọn','Các em tự đặt tên robot, tự chọn nhiệm vụ và màu đội.'],['🃏','Thích sưu tầm','Thẻ bài, huy hiệu và bản đồ hành trình để thu thập đủ bộ.'],['📺','Muốn nhớ lâu','Cuối buổi bỏ lửng một bí ẩn cho tuần sau, như tập phim hay.']].map((a,i)=>`<div class="card" style="border-top:10px solid ${C[i%4]}"><span class="ico">${a[0]}</span><h3>${a[1]}</h3><p>${a[2]}</p></div>`).join('');
+$('xu').innerHTML=[['Hoàn thành nhiệm vụ buổi học',10],['Bắt được Bác Bug (tự tìm, tự sửa)',10],['Điểm Gan Dạ: dám thử cách mới',5],['Hỏi một câu hỏi hay',3],['Giúp bạn mà không làm hộ',5],['Làm thêm, sáng tạo vượt yêu cầu',10],['Cả đội dọn dẹp gọn gàng',5]].map(r=>`<tr><td>${r[0]}</td><td>+${r[1]}</td></tr>`).join('');
+$('ranks').innerHTML=['Học việc','Kỹ sư tập sự','Kỹ sư','Kỹ sư trưởng','Chỉ huy Nhí'].map((r,i)=>`<div style="height:${40+i*15}%;--c:${['#e4e0fa','#aebaff','#7fe0cf','#ff9dbb','#ffd25e'][i]}">${r}</div>`).join('');
+$('badge').innerHTML=[['🐛','Thợ Săn Bug','bắt nhiều lỗi'],['💡','Nhà Phát Minh','ý tưởng độc đáo'],['🤝','Đồng Đội Vàng','hay giúp bạn'],['🔥','Người Kiên Trì','thử lại nhiều lần'],['🔍','Nhà Thám Hiểm','hỏi khiến thầy phải nghĩ']].map(b=>`<div class="card" style="padding:12px 16px"><h3 style="font-size:17px">${b[0]} ${b[1]}</h3><p style="font-size:14px;margin:0">${b[2]}</p></div>`).join('');
+$('parts').innerHTML=[['🔋','Pin và hộp pin','Bình sữa năng lượng','Bình sữa em bé: hết sữa là robot "đói"','Lắp ngược cực: luật "đỏ gặp đỏ, xanh gặp xanh"'],['🔌','Dây nối','Con đường điện','Ống dẫn nước','Dây lỏng: "lắc nhẹ" để kiểm tra'],['🔘','Công tắc','Người gác cổng','Công tắc đèn trong nhà','Quên bật: kiểm tra pin – công tắc – dây'],['💡','Đèn LED','Đom đóm','Đom đóm báo hiệu trong đêm','Chỉ sáng khi đúng chiều: dán nhãn chiều lắp'],['🔔','Còi (buzzer)','Chú chim hót','Chuông cửa','Quá ồn: "giờ hót" 10 giây mỗi lượt'],['⚙️','Động cơ','Cơ bắp','Chong chóng, quạt máy','Bóp trục, kẹt: kẹt thì tắt ngay'],['🛞','Bánh xe, trục, khung','Đôi chân','Xe đạp, xe đẩy','Bánh lỏng: lắc nhẹ, chặt mới được chạy'],['🔧','Bánh răng, đòn bẩy','Anh em răng cưa, Bập bênh','Bập bênh ở sân chơi','Răng không khớp: "nắm tay nhau" từng răng'],['🧠','Bo mạch điều khiển','Bộ não','Bộ não nhận tin rồi ra lệnh cho tay chân','Cắm sai cổng: "cầm đầu cắm, không kéo dây"'],['🦇','Cảm biến siêu âm','Dơi','Dơi biết đường nhờ tiếng vọng','Đo sai với vật mềm: dùng vật phẳng, đứng thẳng'],['🐱','Cảm biến dò line','Mắt mèo','Mắt mèo phân biệt tối và sáng','Ánh sáng đổi làm lệch: đo lại trước mỗi lần chạy'],['🛎️','Nút bấm','Chuông cửa','Chuông cửa nhà em','Bấm liên tục: "bấm một lần, chờ robot nghe"']].map((p,i)=>`<div class="card part" style="--c:${C[i%4]}"><span class="ico">${p[0]}</span><div class="nick">${p[2]}</div><h3>${p[1]}</h3><p>Giống: ${p[3]}</p><em><b>Bác Bug hay gặp:</b> ${p[4]}</em></div>`).join('');
+$('stair').innerHTML=[['Lệnh rõ ràng','như chỉ đường cho bạn bịt mắt','Lệnh mơ hồ như "đi một chút"'],['Một lệnh là một việc','như một nốt nhạc','Quên nối máy hoặc bấm Chạy'],['Chuỗi lệnh là thứ tự','như công thức bánh mì kẹp','Sai thứ tự, thiếu một bước'],['Số lượng và thời gian','như đếm nhịp, đếm bước','Số quá lớn nên xe tông tường'],['Vòng lặp','như điệp khúc bài hát','Lặp mãi không dừng'],['Nếu – Thì','như đèn giao thông','Điều kiện đặt ngược'],['Biến và đếm điểm (lớp 4–5)','như bảng Xu của lớp','Quên đưa điểm về 0'],['Kết hợp và tự thiết kế','như nấu cả bữa ăn','Chương trình quá dài: chia nhỏ']].map((l,i)=>`<li class="card" style="--n:${i}"><span class="lv">${i}</span><div><b>${l[0]}</b><small>${l[1]}</small></div><div><small><b>🐛 Bác Bug:</b> ${l[2]}</small></div></li>`).join('');
+$('tips').innerHTML=[['Em nản vì robot không chạy','Không sửa hộ. Hỏi "Bác Bug đang trốn ở đâu nhỉ?" và tặng điểm Gan Dạ.'],['Em xong sớm và chán','Giao Thử thách sao vàng hoặc cho làm Trợ lý Chỉ huy.'],['Hai em tranh nhau điều khiển','Đổi vai Kỹ sư cơ khí / lập trình bằng đồng hồ cát.'],['Em nhút nhát','Cho "robot kể thay em" thay vì tự nói.'],['Đội thua cuộc','Luôn có điểm cho cải tiến, kèm một lời khen cụ thể.']].map(t=>`<div><b>${t[0]}</b><p style="color:var(--soft);font-size:15px">${t[1]}</p></div>`).join('');
+
+const G=[['Chặng 1: Đánh thức Bít-Bô','Buổi 1–3'],['Chặng 2: Chế tạo xe cứu hộ','Buổi 4–7'],['Chặng 3: Bắt Bác Bug, dạy robot suy nghĩ','Buổi 8–12'],['Chặng 4: Chế tạo robot của riêng em','Buổi 13–16']];
+const M=[
+[0,'Hộp bí ẩn','Hộp bí ẩn kêu "bíp bíp"','Thầy bước vào với chiếc hộp đang rung và kêu "bíp bíp": trong đó là gì, nó có sống không?','Trò chơi "Bạn là robot" ba vòng: ra lệnh tự do, chỉ dùng 4 thẻ mũi tên, rồi đưa "robot" đến kho báu. Các em nhận ra robot chỉ làm đúng điều ta bảo.','Mảnh bản đồ "Bít-Bô đang gọi cứu...". Các em tô vùng sáng đầu tiên.','Robot mẫu (chỉ quan sát) · Nấc 0'],
+[0,'Giác quan','Robot cũng cần "giác quan"','Bịt mắt một em, các bạn dẫn đường bằng lời. Cả lớp nhận ra thiếu giác quan thì khó làm việc.','Chia bộ phận thành Giác quan, Bộ não, Tay chân. Chơi truyền bóng "Con đường điện", rồi làm quen dây và công tắc thật.','Phát thẻ bài Kỹ sư, tô thêm một vùng sáng.','Dây nối, công tắc · Nấc 1'],
+[0,'Đèn không sáng','Bí ẩn bóng đèn không sáng','Thầy giấu một dây đứt trong mạch: "Ai là thám tử giỏi nhất?"','Lắp pin và đèn LED. Điều tra 3 mạch lỗi: dây hở, công tắc tắt, pin lắp ngược.','Tín hiệu: "Cần một chiếc xe cứu hộ!"','Pin, đèn LED · Ôn thẻ lệnh'],
+[1,'Cuộc thi lăn','Cuộc thi lăn: bóng, hộp hay xe?','Thả bóng và hộp xuống dốc, các em đặt cược Xu xem cái nào tới trước.','Khám phá vì sao bánh xe giúp di chuyển dễ. Lắp khung xe, thử nhiều loại bánh.','Mở Hộp Bí Ẩn số 1.','Bánh xe, trục, khung'],
+[1,'Hộp ma thuật','Hộp ma thuật bí mật','Chiếc hộp kín chỉ thấy tay quay, bên trong có thứ chuyển động.','Mở hộp, phát hiện bánh răng. Thử "em nhỏ nhất lớp nâng được thầy" bằng đòn bẩy.','Mỗi đội có cơ cấu bánh răng của riêng mình.','Bánh răng, đòn bẩy'],
+[1,'Thổi hồn cho xe','Thổi hồn cho chiếc xe','Thầy cầm động cơ: "Đây là cơ bắp của robot. Vì sao nó quay được?"','Nối pin cho quay, đảo dây cho quay ngược, lắp xe và đặt tên. Một em làm "xe người" nghe lệnh chạy, dừng, quay.','Chụp ảnh "lễ khai sinh" cho từng chiếc xe.','Động cơ · Nấc 2 không máy'],
+[1,'Grand Prix','Grand Prix Bít-Bô','Có "sự kiện bất ngờ" trên đường đua. Mỗi đội có 10 phút ở Phòng Sửa Xe.','Đua vòng 1, cải tiến, đua vòng 2. Thưởng nhiều điểm cho đội cải tiến nhiều nhất.','Bác Bug để lại một tin nhắn bí ẩn.','Cải tiến xe · Ôn chuỗi lệnh'],
+[2,'Thầy-robot ngốc','Thầy-robot ngốc nghếch','Thầy đóng robot làm bánh mì kẹp, làm đúng từng chữ ("phết bơ" là phết lên cả cái bàn).','Viết công thức (thuật toán) bằng thẻ, làm quen bo mạch, rồi săn Bug trên giấy: 3 chương trình lỗi.','Mở Hộp Bí Ẩn số 2.','Bo mạch · Nấc 2 trên giấy'],
+[2,'Kho báu','Bản đồ kho báu','Thầy kéo một khối "bật đèn", bấm Chạy, đèn xe sáng cả lớp "ồ" lên.','Làm quen giao diện khối, ghép 1 đến 5 khối để đưa xe tới kho báu trên thảm ô. Mỗi lần Chạy ghi một dự đoán.','Đội bắt được Bác Bug được thưởng điểm.','Còi · Nấc 1–3 trên máy'],
+[2,'Phép thuật Lặp','Phép thuật "Lặp"','"Vẽ hình vuông cần 8 lệnh. Thầy chỉ cần 2 lệnh, em tin không?"','Khám phá vòng lặp. Thưởng "Kỹ sư lười thông minh": chương trình ngắn nhất mà vẫn đúng.','Biểu diễn đèn và nhạc theo vòng lặp.','Nấc 4: vòng lặp'],
+[2,'Nhìn thấy','Robot biết "nhìn thấy"','Xe tự dừng trước tường mà không ai chạm. "Phép thuật hay khoa học?"','Làm quen Dơi, đọc 3 khoảng cách (gần, vừa, xa), viết "Nếu thấy vật ở gần hơn … thì dừng" và chọn số bằng cách thử.','Hé lộ con Bug to nhất ở mê cung cuối.','Cảm biến siêu âm · Nấc 5'],
+[2,'Mê cung đen','Mê cung đen','Mê cung đen kẻ trên sàn: "Bít-Bô bị lạc, chỉ robot biết nhìn đường mới cứu được."','Dùng cảm biến dò line để xe đi hết mê cung. Thử và sửa lỗi nhiều lần.','Mở Hộp Bí Ẩn số 3, trao huy hiệu Thợ Săn Bug.','Cảm biến dò line · Nấc 5 nâng cao'],
+[3,'Phát minh','Hội đồng phát minh','"Căn cứ cần một robot đặc biệt. Mỗi đội tự nghĩ ra robot của mình."','Mỗi đội chọn vai trò cứu hộ (chở thuốc, dọn rác, canh gác, tìm đường), vẽ thiết kế, đăng ký bằng sáng chế.','Các em tự chọn nhiệm vụ của mình.','Nút bấm (tự chọn) · Nấc 7, lớp 4–5 thêm nấc 6'],
+[3,'Xưởng chế tạo','Xưởng chế tạo và Thanh tra Bug (buổi 14)','"Hôm nay các đội làm Thanh tra Bug cho nhau!"','Chế tạo và thử robot. Giữa buổi hai đội đổi chỗ tìm lỗi giúp nhau. Giúp bạn bắt Bug cũng được điểm.','Mỗi đội ghi lại Bug đã bắt.','Nấc 7: tự thiết kế'],
+[3,'Thanh tra Bug','Xưởng chế tạo và Thanh tra Bug (buổi 15)','"Hôm nay các đội làm Thanh tra Bug cho nhau!"','Hoàn thiện robot, tiếp tục đổi chỗ tìm lỗi giúp nhau, chuẩn bị phần giới thiệu.','Robot sẵn sàng cho Ngày hội.','Nấc 7: tự thiết kế'],
+[3,'Ngày hội','Ngày hội Giải cứu Bít-Bô','Phụ huynh đến thăm "Căn cứ". Cả hành tinh đang chờ.','Từng đội giới thiệu robot, giải thích chương trình từng khối một. Rồi tất cả robot hợp lực hoàn thành một bản đồ chung để đánh thức Bít-Bô.','Trao bằng Kỹ sư Nhí, huy hiệu sưu tầm và nhận xét tay của thầy.','Giải thích chương trình']
+];
+const lit=new Set();let cur=-1;
+function draw(){
+ $('chang').innerHTML=G.map((g,gi)=>`<div class="chang" style="--c:${C[gi]}"><header><h3>${g[0]}</h3><span>${g[1]}</span></header><div class="nodes">${M.map((m,i)=>m[0]==gi?`<button class="node${lit.has(i)?' on':''}" data-i="${i}" aria-pressed="${i==cur}"><i>${i+1}</i><small>${m[1]}</small></button>`:'').join('')}</div></div>`).join('');
+ $('fill').style.width=lit.size/16*100+'%';
+ $('count').textContent=lit.size==16?'Bít-Bô đã thức dậy!':`Bít-Bô đã sáng ${lit.size}/16`;
+}
+$('chang').addEventListener('click',e=>{
+ const b=e.target.closest('.node');if(!b)return;
+ const i=+b.dataset.i,m=M[i];cur=i;lit.add(i);draw();
+ const d=$('detail');d.style.setProperty('--c',C[m[0]]);
+ d.innerHTML=`<h3>Nhiệm vụ ${i+1}: ${m[2]}</h3><dl><dt>Mở màn</dt><dd>${m[3]}</dd><dt>Nhiệm vụ</dt><dd>${m[4]}</dd><dt>Kết buổi</dt><dd>${m[5]}</dd></dl><span class="tag">${m[6]}</span>`;
+ document.querySelector(`.node[data-i="${i}"]`).focus({preventScroll:true});
+});
+draw();
+</script>
+</body>
+</html>
