@@ -4,7 +4,9 @@
 
 <br/>
 
-<img src="assets/Logo.jpeg" width="110" style="border-radius:18px" alt="AI Học Lập Trình"/>
+<img src="assets/Logo.jpeg" height="110" style="border-radius:18px" alt="AI Học Lập Trình"/>
+&nbsp;&nbsp;&nbsp;
+<img src="assets/logo-ada-group.jpg" height="110" style="border-radius:18px" alt="ADA GROUP"/>
 
 # 🤖 Biệt đội Kỹ sư Nhí: Cứu Hành tinh Bít-Bô
 
@@ -285,7 +287,7 @@ code .
 ├── 📘 Giao-Trinh-Tong.md                ← giáo trình đầy đủ 6 mục
 ├── 🧭 Muc-Luc-32-Buoi.md                ← mục lục, link tới từng buổi
 ├── 🌐 khoa-hoc-robotics-bit-bo.html     ← trang giới thiệu khóa học (bản gốc)
-├── 🎨 assets/                           ← banner, sơ đồ, chữ ký, logo
+├── 🎨 assets/                           ← banner, sơ đồ, chữ ký, logo AI Học Lập Trình và ADA GROUP
 ├── 📁 Buoi01_LT_Robot-La-Gi/
 │   ├── 📝 Bai-Tap/    Buoi01_Phieu-Bai-Tap.md   ← phiếu cho học sinh
 │   ├── 💻 Colab/      README.md                 ← chương trình mẫu
@@ -311,7 +313,9 @@ code .
 
 <div align="center">
 
-<img src="assets/Logo.jpeg" width="86" alt="AI Học Lập Trình"/>
+<img src="assets/Logo.jpeg" height="86" alt="AI Học Lập Trình"/>
+&nbsp;&nbsp;
+<img src="assets/logo-ada-group.jpg" height="86" alt="ADA GROUP"/>
 
 ### Trương Tấn Nghĩa
 
